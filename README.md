@@ -1,0 +1,10 @@
+Abstract:
+
+We introduce a novel co-regulatory cognitive-intent simulation framework implemented in PyTorch, which integrates predictive coding principles with real-time regulatory feedback to model the interplay between an autonomous Actor, a supervisory Machine Regulator, and a dynamic non-linear Environment.
+The Actor fuses multi-modal observations to generate latent beliefs, projects future intentions via recurrent prediction, and selects actions through a learned policy, while the Regulator continuously infers the Actor’s latent goals, maintains a shared objective, and issues corrective state- and intention-based feedback. 
+Embedded within a closed-loop environment that computes prediction, intention, and alignment metrics, this architecture enables bidirectional adaptation between the Actor’s internal model and regulator-driven corrections. In simulations over 1,000 time steps, the full co-regulatory model achieved a 79 % reduction in
+predictive error and converged to a mean intention alignment score of 0.85, stabilizing after approximately 300 steps.  Ablation studies demonstrate that removing regulatory feedback results in substantially higher residual error (plateauing at 0.48) and poor alignment (≈0.30), underscoring the essential role of bidirectional 
+feedback for rapid learning and coherent goal maintenance. Stability and coherence analyses further reveal that the co-regulatory loop yields eightfold greater stability and sevenfold higher coherence than the feedback-ablated variant.Our findings highlight how coupling predictive coding with supervisory regulation accelerates 
+adaptation and fosters sustained alignment of internal intentions, suggesting applications in human-machine teaming, adaptive control, and assistive AI.  We provide open-source code and outline future directions including parameter sweeps, enhanced visualization, hierarchical regulation, and empirical validation with human participants.
+By bridging cognitive-intent modeling and machine oversight, this work lays the groundwork for adaptive systems that anticipate, guide, and harmonize with human goals in complex environments.
+
